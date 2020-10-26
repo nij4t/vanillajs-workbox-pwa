@@ -25,3 +25,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
         });
     })
+
+const btn = document.createElement('input')
+btn.type = 'button'
+btn.value = 'clearCache'
+document.body.appendChild(btn)
+
+btn.addEventListener('click', () => {
+    fetch('https://jsonplaceholder.typicode.com/users', {method: 'POST', body: {}})
+     .then(res => res.json()).then(data => console.log(data))
+}) 
