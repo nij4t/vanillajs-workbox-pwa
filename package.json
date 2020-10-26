@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server -p 1335 build -c-1"
+    "start": "yarn build && yarn serve",
+    "serve": "serve build",
+    "build": "workbox copyLibraries build/ && workbox injectManifest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "workbox-cli": "^5.1.4",
+    "serve": "^11.3.2"
+  }
 }

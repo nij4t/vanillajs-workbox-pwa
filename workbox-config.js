@@ -3,6 +3,7 @@ module.exports = {
   "globPatterns": [
     "**/*.{css,html,js}"
   ],
-  "swDest": "build\\sw.js",
+  "swDest": "build/sw.js",
   "swSrc": "src-sw.js"
+  // "importScripts": ["src-sw.js"]
 };
